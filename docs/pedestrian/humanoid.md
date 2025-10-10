@@ -1,7 +1,7 @@
 # [人形机器人仿真](https://github.com/google-deepmind/mujoco/network/dependents)
 
-<!-- 共4581个仓库，更新到最新的仓库： https://github.com/samlobel/many_gamma 
-更新到的页面： https://github.com/google-deepmind/mujoco/network/dependents?dependents_before=MzQ0MTU1MzUzOTU -->
+<!-- 共4581个仓库，更新到最新的仓库： https://github.com/rkourdis/solo12_mujoco 
+更新到的页面： https://github.com/google-deepmind/mujoco/network/dependents?dependents_before=MzQ2MzU2MzM2Mzk -->
 
 - [__Mujoco__](#Mujoco)
     - [人的建模](#humanoid_model)
@@ -285,6 +285,8 @@
 
 [在 lunarlander 和 bipedalwalker 上测试的 DQN 和 DDPG 的 PyTorch 实现](https://github.com/YingXu-swim/lunarlander-bipedalwalker)
 
+[targeted-double-q-learning](https://github.com/alishiraliGit/targeted-double-q-learning)
+
 [Q学习在二十一点中的应用](https://github.com/mishonenchev/BlackJackAI)
 
 [重症监护应用的多准则深度 Q 学习](https://github.com/alishiraliGit/multi-criteria-deep-q-learning)
@@ -535,6 +537,14 @@
 
 [CQL，PDQN，离线RL评估](https://github.com/zhuhxi/DriverOrderOfflineRL)
 
+[使用来自 4 个种子的 Mujoco Benchmark 结果对 SAC、TD3 和 TD7 进行 pytorch 实现](https://github.com/seungju-k1m/sac-td3-td7)
+
+[PPO-Wipe-Excercise](https://github.com/AbhinavPeri/PPO-Wipe-Excercise)
+
+[TSP 或基于地形的切换](https://github.com/ShreelekhaR/TerrainBasedSwitching)
+
+[USD](https://github.com/nkvch/USD)
+
 [用于 RL 实验的模块化基准测试程序](https://github.com/athkand/Benches)
 
 [视觉泛化的强化学习基准](https://github.com/gemcollector/RL-ViGen)
@@ -619,6 +629,8 @@
 
 [跳跃机器人 使用MuJoCo研究跳跃机器人腿部机构设计](https://github.com/changqiy/robot)
 
+[包含 Solo-12 四足动物的完整 MuJoCo 模型，包括高保真视觉效果](https://github.com/rkourdis/solo12_mujoco)
+
 [使用MuJoCo研究跳跃机器人腿部机构设计](https://github.com/yinfanyi/hopper)
 
 [使用变分自编码器 (VAE) 和生成对抗网络 (GAN) 等深度学习人工智能算法，可以使用训练数据集自动创建新的游戏内容](https://github.com/RusherRG/RLGymBoost)
@@ -664,6 +676,8 @@
 [进化机器人 Python——脑体协同优化框架](https://github.com/Co-Evolve/erpy)
 
 [通过自适应情境感知策略实现强化学习中的动态泛化](https://github.com/Michael-Beukman/DecisionAdapter)
+
+[基于模型的状态扩散器，用于样本高效在线强化学习](https://github.com/ryanliu30/StateDiffusion)
 
 [强化学习中技能转移的分层启动源代码](https://github.com/SSHAY007/MiniHackThePlanet)
 
@@ -871,6 +885,8 @@
 
 [cs285](https://github.com/johnviljoen/cs285)
 
+[由阿尔托大学 Joni Pajarinen 教授主讲的强化学习课](https://github.com/amiiiza/reinforcement_learning)
+
 [CS 285 最终项目：基于连续时间模型的强化学习中的动态学习的神经常微分方程](https://github.com/ZekaiWang04/cs285_proj)
 
 [交互式机器人学习课程项目](https://github.com/LeonardoWjq/NP-RAM)
@@ -1052,9 +1068,15 @@
 
 [可用于开发机器人 3D 装箱问题的求解器的gym环境](https://github.com/floriankagerer/bed-bpp-env)
 
+[实现 DDPG 进行简单的倒水](https://github.com/yashas-salankimatt/csce642-finalproj)
+
 [测试 RL 在量子控制中的应用](https://github.com/AnikenC/QuantumControlWithRL) - 特别关注电路级和脉冲级门校准任务
 
 [用于机器人插入任务的 MuJoCo 模拟](https://github.com/gintautas12358/Mujoco-Eleanor)
+
+[使用基于贝叶斯优化的课程学习提高自主赛车深度强化学习方法的环境鲁棒性](https://github.com/PRISHIta123/Curriculum_RL_for_Driving)
+
+[倒立摆](https://github.com/AniruddhS24/inverted-pendulum)
 
 [多任务机器人学习](https://github.com/Eyshika/Multi_Task_Robot_Learning)
 
@@ -1305,6 +1327,10 @@
 
 [使用 mujoco 进行 DOQ 模拟](https://github.com/griffinaddison/doq_viz)
 
+[网络可塑性](https://github.com/arjunpat/network-plasticity)
+
+[sb3-mujoco-1](https://github.com/hansen1416/sb3-mujoco-1)
+
 [使用 GP 作为探索指标](https://github.com/contagon/gp4expl)
 
 [高级软件实践](https://github.com/YongBonJeon/Advanced-Software-Practices)
@@ -1315,6 +1341,12 @@
 
 [network-plasticity](https://github.com/arjunpat/network-plasticity)
 
+[自己实现的深度强化学习算法](https://github.com/minghongx/deeprl)
+
+[通过 10 个视觉变化因素扩展 Metaworld 环境](https://github.com/dtch1997/factor-world)
+
+[rl_learning](https://github.com/yuxuehui/rl_learning)
+
 [many_gamma](https://github.com/samlobel/many_gamma)
 
 [231A_project](https://github.com/johnviljoen/231A_project)
@@ -1322,8 +1354,6 @@
 [cs340lab4](https://github.com/Dylan920424/cs340lab4)
 
 [强化学习研究](https://github.com/fredsonaguiar/bang_bang_mountain_car)
-
-[rl_learning](https://github.com/yuxuehui/rl_learning)
 
 [DPC_for_robotics](https://github.com/pnnl/DPC_for_robotics)
 
