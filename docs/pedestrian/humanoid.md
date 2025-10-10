@@ -1,7 +1,7 @@
 # [人形机器人仿真](https://github.com/google-deepmind/mujoco/network/dependents)
 
-<!-- 共4581个仓库，更新到最新的仓库： https://github.com/mochan-b/mujoco_mocapper 
-更新到的页面： https://github.com/google-deepmind/mujoco/network/dependents?dependents_before=MzQ2MzU2MzM2Mzk -->
+<!-- 共4581个仓库，更新到最新的仓库： https://github.com/WLeiiiii/DRL_lib 
+更新到的页面： https://github.com/google-deepmind/mujoco/network/dependents?dependents_before=MzY4NDM3Nzk5NDk -->
 
 - [__Mujoco__](#Mujoco)
     - [人的建模](#humanoid_model)
@@ -66,6 +66,8 @@
 
 [用于研究婴儿认知发展的平台](https://github.com/trieschlab/MIMo) - 可产生视觉、触觉、本体感觉和前庭系统模拟感官输入的模块组成
 
+[用于分析人手样本钳式抓握执行情况的机器人测试台的设计和实现](https://github.com/NikonPic/PhoenixHand)
+
 [Menagerie：MuJoCo物理引擎高质量模型集合](https://github.com/google-deepmind/mujoco_menagerie)
 
 ### 比赛 <span id="Mujoco"></span>
@@ -91,6 +93,8 @@
 
 [Faur 手控制](https://github.com/MihneaToader/RWR_control)
 
+[绳索和电缆操纵规划的拓扑表示](https://github.com/UM-ARM-Lab/mjregrasping)
+
 [适用于 ROS 机器人的 FastRLAP 实现、相关的 Gazebo 环境，以及用于越野驾驶的 MuJoCo 环境](https://github.com/kylestach/fastrlap-release)
 
 [一款一体化 ROS 软件包 RoTools](https://github.com/DrawZeroPoint/RoTools) - 用于高级机器人任务调度、视觉感知、路径规划、仿真以及直接/远程操控。它利用 BehaviorTree 实现快速的任务构建和协调，并提供各种实用程序来弥合真实/模拟机器人与高级任务调度程序之间的差距。
@@ -103,13 +107,23 @@
 
 [在MuJoCo中建模和模拟人机交互任务](https://github.com/User-in-the-Box/user-in-the-box) - 用户采用具有感知能力（例如自我中心视觉）的肌肉驱动生物力学模型进行建模，并通过强化学习进行训练以解决交互任务
 
+[仿生机器人测试平台](https://github.com/Co-Evolve/brt)
+
+[具身智能体的脑-身同步探索](https://github.com/yangsizhe/bbsea)
+
 [利用肌肉学习：拟人化任务中数据效率和鲁棒性的优势](https://github.com/martius-lab/learningwithmuscles)
+
+[利用强化学习模拟双足站立和平衡](https://github.com/Ardiegon/ReinforcementHumanoidBalancing)
+
+[在 MUJOCO 和 Isaac Gym 中模拟 SMPL/SMPLX 人形机器人](https://github.com/ZhengyiLuo/SMPLSim)
 
 [从任意跌倒状态起身](https://github.com/tianxintao/get_up_control) - [其他](https://github.com/sumanth-tangirala/get-up-control-trajectories)
 
 [具有内部复杂性的网络模型架起了人工智能与神经科学的桥梁](https://github.com/helx-20/complexity)
 
 [训练和比较人形 AI 代理完成1v1 近战](https://github.com/rodSiry/bagarreio)
+
+[行走](https://github.com/scott-yj-yang/brax_rodent_walk)
 
 [探索与行为相关的神经网络](https://github.com/danielcson/dsc_capstone_q1) - 模仿行为来模拟大脑
 
@@ -133,6 +147,12 @@
 
 [用于机器人、深度强化学习和神经科学研究的 Python 工具](https://github.com/shandilya1998/neurorobotics)
 
+
+### 人形机器人
+
+[旨在训练人形机器人的运动技能，强调从模拟到现实环境的零样本迁移](https://github.com/roboterax/humanoid-gym)
+
+[使用四足机器人 Unitree Go1 进行强化学习](https://github.com/DavidDema/DeepRL-quadruped-robot)
 
 
 ## 强化学习 <span id="rl"></span>
@@ -343,6 +363,8 @@
 
 [多智能体竞赛](https://github.com/KJaebye/Multiagent-Race)
 
+[多智能体强化学习算法](https://github.com/RahulBoipai/MADDPG-pettingzoo-pytorch)
+
 [MADiff：基于扩散模型的离线多智能体学习](https://github.com/zbzhu99/madiff)
 
 [PyTorch 和 Ray 用于分布式 RL](https://github.com/fatcatZF/rayrl-atari)
@@ -352,6 +374,8 @@
 ### 模仿学习 <span id="imitation"></span>
 
 [通过语境翻译进行观察模仿](https://github.com/medric49/imitation-from-observation) - 一种基于演示训练代理模仿专家的算法
+
+[从人类示范中学习操纵技能](https://github.com/aai4r/aai4r-pouring-skill)
 
 [使机械臂模仿另一只手臂的方向](https://github.com/Kisfodi/MimicArm)
 
@@ -430,6 +454,8 @@
 
 [机器人手部操作任务的逆向强化学习](https://github.com/saqib1707/RL-Robot-Manipulation)
 
+[包含逆向强化学习算法的 JAX 实现](https://github.com/FLAIROx/jaxirl)
+
 [Inverse_RL](https://github.com/werkaaa/Inverse_RL)
 
 
@@ -446,6 +472,8 @@
 [Meta-World 是一个开源基准，用于开发和评估用于连续控制机器人操作环境的多任务和元强化学习算法](https://github.com/Farama-Foundation/Metaworld)
 
 [基于技能的领域转移元强化学习](https://github.com/GarlicWang/RL_2023_Fall)
+
+[元强化学习的进化储层](https://github.com/corentinlger/ER-MRL)
 
 [元学习好奇心算法](https://github.com/Ziksby/MetaLearnCuriosity)
 
@@ -477,6 +505,10 @@
 
 [虚拟工厂环境中的自主Transpalet导航项目](https://github.com/erdnj/Robotics)
 
+[通过物理模拟实现手与物体交互的稳定姿态估计](https://github.com/rongakowang/DeepSimHO)
+
+[风险感知深度强化学习在机器人群体导航中的应用](https://github.com/QZhSSLab/RADR)
+
 [动作稳健决策transformer](https://github.com/afonsosamarques/action-robust-decision-transformer)
 
 [通过对不确定道路系统进行持续数据收集来进行路线优化](https://github.com/BroknLogic/dmaProject) - 包裹递送算法，使其能够在更新道路系统信息的同时安排递送。
@@ -497,6 +529,8 @@
 [基于强化学习的双轮足平衡机器人控制](https://github.com/aa4cc/sk8o-rl)
 
 [基于 RL 的 6 自由度机械臂逆运动学控制](https://github.com/Pranav-Malpure/B-Tech-Project)
+
+[连续控制算法的基本实现](https://github.com/Bowen-He/Bowen-Implementation-DDPG-TD3-SAC)
 
 [学习使用 2-DoF 夹持器进行力控制](https://github.com/llach/learning_fc)
 
@@ -631,6 +665,8 @@
 
 [主动视觉强化学习的环境集合](https://github.com/elicassion/active-gym)
 
+[通过可微分因果发现缩小模拟与现实之间的差距](https://github.com/XilunZhangRobo/COMPASS-Sim2Real)
+
 [仿生鼠机器人跨越多种地形工作](https://github.com/GrumpySloths/ForCode)
 
 [跳跃机器人 使用MuJoCo研究跳跃机器人腿部机构设计](https://github.com/changqiy/robot)
@@ -639,7 +675,11 @@
 
 [使用MuJoCo研究跳跃机器人腿部机构设计](https://github.com/yinfanyi/hopper)
 
+[模拟机器人环境，用于评估对基本物体重新排列的物体操作方法](https://github.com/mohammad200h/rearrangement_benchmark)
+
 [使用变分自编码器 (VAE) 和生成对抗网络 (GAN) 等深度学习人工智能算法，可以使用训练数据集自动创建新的游戏内容](https://github.com/RusherRG/RLGymBoost)
+
+[利用 Franka Manipulator 在 MuJoCo 中实现的开源强化学习环境](https://github.com/zichunxx/panda_mujoco_gym)
 
 [用于 RL 的生成细胞自动机类学习环境](https://github.com/smearle/autoverse)
 
@@ -679,11 +719,15 @@
 
 [使用随机模拟部署保证机器人系统性能](https://github.com/StanfordMSL/performance_guarantees)
 
+[用轨迹解释 RL 决策](https://github.com/karim-abdel/Explaining-RL-Decisions-with-Trajectories)
+
 [进化机器人 Python——脑体协同优化框架](https://github.com/Co-Evolve/erpy)
 
 [通过自适应情境感知策略实现强化学习中的动态泛化](https://github.com/Michael-Beukman/DecisionAdapter)
 
 [基于模型的状态扩散器，用于样本高效在线强化学习](https://github.com/ryanliu30/StateDiffusion)
+
+[通过人类反馈实现高置信度策略改进](https://github.com/httse9/HCPI-HF)
 
 [强化学习中技能转移的分层启动源代码](https://github.com/SSHAY007/MiniHackThePlanet)
 
@@ -1074,7 +1118,7 @@
 
 [空气曲棍球挑战赛](https://github.com/AirHockeyChallenge/air_hockey_challenge) 、[其他](https://github.com/thomasbonenfant/air_hockey_challenge) 、[其他2](https://github.com/Elizabeth-Palacios/Curriculum) 、[其他3](https://github.com/hzm2016/sea_robot_sim)
 
-[2023年空气曲棍球挑战赛](https://github.com/verma-rishabh/air_hockey_qualifying)
+[2023年空气曲棍球挑战赛](https://github.com/verma-rishabh/air_hockey_qualifying) - [其他](https://github.com/SCNU-SAILOR/air_hockey_challenge_demo)
 
 [可用于开发机器人 3D 装箱问题的求解器的gym环境](https://github.com/floriankagerer/bed-bpp-env)
 
@@ -1177,6 +1221,14 @@
 
 [通过遗传算法改进滑翔机的设计](https://github.com/featherware/glider)
 
+[MuJoCo gym 的无人机执行各种活动。传感器包括：2 个摄像头（立体摄像头）、加速度计、陀螺仪](https://github.com/Engineering-Geek/gym-drone)
+
+[RL-UAV 是一个专注于无人机模拟的强化学习项目](https://github.com/Engineering-Geek/RL-UAV)
+
+[MuJoCo 中的无人机模拟](https://github.com/arachakonda/MTP-MuJoCo)
+
+[Isaac Gym 无人机环境](https://github.com/esquivelrs/DTU-RL-Isaac-Gym-Drone-Env)
+
 [无人机仿真](https://github.com/C-monC/Drone-simluation)
 
 [四轴飞行器有效载荷抓取与运输轨迹规划与控制设计](https://github.com/antalpeter1/tdk-2022)
@@ -1192,9 +1244,15 @@
 
 [在本地、Slurm 和 GCP 上运行 RL 代码](https://github.com/bstadie/rl_starter_kit)
 
+[机器人套件](https://github.com/Aleenatron/Robot-Manipulation-)
+
+[一个优雅的 PyTorch 深度强化学习库](https://github.com/thu-ml/tianshou)
+
 [开发用于机器人任务的 RL 代理的环境](https://github.com/alefram/TEG)
 
 [可定制的多用途生产系统框架]()
+
+[Google Cloud Platform 上的数据和 AI 平台](https://github.com/Simbamon/GCP_ML)
 
 [基于MuJoCo的多平台、模块化机器人仿真框架](https://github.com/NoneJou072/robopal) - 主要用于机械臂的强化学习和控制算法实现
 
@@ -1233,6 +1291,10 @@
 
 [通过潜在想象力进行学习的行为](https://github.com/falheisen/BE_dreamer)
 
+[可作为各种强化学习 (RL) 算法的实验场地](https://github.com/seisenmann/RL-Playground)
+
+[Dreamer 的干净 Python 重新实现](https://github.com/minhphd/PyDreamerV1)
+
 [用于自动将动作捕捉添加到 mujoco xml 文件的工具](https://github.com/mochan-b/mujoco_mocapper)
 
 [强化学习算法的实现](https://github.com/sgoodfriend/rl-algo-impls)
@@ -1246,6 +1308,8 @@
 [SERL：用于样本高效机器人强化学习的软件套件](https://github.com/serl-robot/serl)
 
 [为许多有用的机器人库提供通用 API](https://github.com/Tass0sm/corallab-lib)
+
+[MCPHC_old](https://github.com/NamiNaziri/MCPHC_old)
 
 [使用 OpenAI gym 的强化学习示例集合](https://github.com/Makoto1021/reinforcement-learning-examples)
 
@@ -1349,6 +1413,8 @@
 
 [网络可塑性](https://github.com/arjunpat/network-plasticity)
 
+[PPO 和 Friends 是近端策略优化的 PyTorch 实现，同时还具有各种额外的优化和附加组件](https://github.com/lior10r/ppo_and_friends)
+
 [pixel_gcrl](https://github.com/nicolascastanet/pixel_gcrl)
 
 [具有策略预算的个性化强化学习](https://github.com/dimonenka/RL_policy_budget)
@@ -1362,6 +1428,8 @@
 [实施监督 Actor-Critic 策略提炼作为其他迁移学习 RL 方法的基础](https://github.com/HAI-lab-UVA/policy-distillation-andrew)
 
 [DRL-AirHockey](https://github.com/zhalehmehrabi/DRL-AirHockey) - [其他1](https://github.com/ShuoZheLi/air_hockey_challenge_robosuite)
+
+[mt-world-model-pretraining](https://github.com/jaredmejia/mt-world-model-pretraining)
 
 [了解 Transformer 的研讨会](https://github.com/klao/t9r-class)
 
