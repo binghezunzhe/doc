@@ -1,7 +1,7 @@
 # [人形机器人仿真](https://github.com/google-deepmind/mujoco/network/dependents)
 
-<!-- 共4581个仓库，更新到最新的仓库： https://github.com/WLeiiiii/DRL_lib 
-更新到的页面： https://github.com/google-deepmind/mujoco/network/dependents?dependents_before=MzY4NDM3Nzk5NDk -->
+<!-- 共4581个仓库，更新到最新的仓库： https://github.com/stepjam/mojo 
+更新到的页面： https://github.com/google-deepmind/mujoco/network/dependents?dependents_before=MzcwNDY2Njc0NjY -->
 
 - [__Mujoco__](#Mujoco)
     - [人的建模](#humanoid_model)
@@ -150,12 +150,20 @@
 
 ### 人形机器人
 
+[HumanoidBench：用于全身运动和操控的模拟人形基准](https://github.com/carlosferrazza/humanoid-bench)
+
 [旨在训练人形机器人的运动技能，强调从模拟到现实环境的零样本迁移](https://github.com/roboterax/humanoid-gym)
+
+[Humanoid-Gym：基于零样本 Sim2Real 迁移的人形机器人强化学习](https://github.com/thuuzi/bipedv5_gym)
 
 [使用四足机器人 Unitree Go1 进行强化学习](https://github.com/DavidDema/DeepRL-quadruped-robot)
 
+[专家接近度作为单次演示模仿学习的替代奖励](https://github.com/stanl1y/tdil)
+
 
 ## 强化学习 <span id="rl"></span>
+
+[利用强化学习改进膝关节生物力学建模的新方法](https://github.com/NikonPic/DynamicOpt)
 
 [使用 OpenAI Gym 环境的 xArm6 机器人强化学习框架](https://github.com/julio-design/xArm6-Gym-Env) - 该模型使用深度确定性策略梯度(DDPG) 进行连续动作，并使用后见之明经验回放(HER)
 
@@ -497,6 +505,10 @@
 
 ## 规划 <span id="planning"></span>
 
+[分层世界模型能够实现跨多个时间尺度的推理](https://github.com/CognitiveModeling/THICK)
+
+
+
 [外展机器人学习决策](https://github.com/chrisyrniu/neurips22_outreach_robot_learning_for_decision_making)
 
 [MoCapAct和dm_control的扩展，用于避障任务](https://github.com/Team-Zircon/ZirconProject)
@@ -638,6 +650,10 @@
 
 ## 大模型 <span id="llm"></span>
 
+[利用言语纠正来提升机器人在执行复杂的长期任务时的表现](https://github.com/yay-robot/yay_robot)
+
+
+
 [将 ChatGPT 集成到机器人控制过程中，以实现零样本规划和控制](https://github.com/andrei-calin-dragomir/gpt-controller)
 
 [使用 3GPP 文件微调不同的 LLM](https://github.com/hang-zou/LLM_FT_3GPP)
@@ -656,6 +672,10 @@
 
 
 ## 建模 <span id="modelling"></span>
+
+[iGibson：在大型真实互动场景中训练机器人的模拟环境](https://github.com/S-CHOI-S/Gibson-Env)
+
+
 
 [获取机器人 URDF](https://github.com/Engineering-Geek/robot_arm)
 
@@ -710,6 +730,9 @@
 [建筑物内的测试环境的 3D 模型](https://github.com/AIMotionLab-SZTAKI/AIMotionLab-Virtual)
 
 ## 研究 <span id="research"></span>
+
+[开发考虑人类偏好的机器人系统](https://github.com/joonhyung-lee/gov-prj-etri-llm-robotics)
+
 
 [谷歌研究库](https://github.com/google-research/google-research)
 
