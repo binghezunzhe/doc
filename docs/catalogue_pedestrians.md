@@ -81,6 +81,17 @@
 * [__警察 - 2__](#police_2)
 ---
 
+## 轮椅使用者
+轮椅模型与大多数行人模型兼容。您可以使用行人蓝图的 has_attribute 方法测试所选行人是否具有 can_use_wheelchair 属性，从而确定其是否与轮椅模型兼容。然后将 use_wheelchair 属性设置为 True：
+
+```python
+pedestrian_bp = bp_lib.find('walker.pedestrian.0028')
+if pedestrian_bp.has_attribute('can_use_wheelchair'):
+    pedestrian_bp.set_attribute('use_wheelchair', 'True')
+    pedestrian = world.spawn_actor(pedestrian_bp, spawn_point)
+```
+
+
 ## 成年人
 
 ---
