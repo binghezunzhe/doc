@@ -1,7 +1,7 @@
 # [人形机器人仿真](https://github.com/google-deepmind/mujoco/network/dependents)
 
-<!-- 共4581个仓库，更新到最新的仓库： https://github.com/stepjam/mojo 
-更新到的页面： https://github.com/google-deepmind/mujoco/network/dependents?dependents_before=MzcwNDY2Njc0NjY -->
+<!-- 共4581个仓库，更新到最新的仓库： https://github.com/hty0111/Biorobotics 
+更新到的页面： https://github.com/google-deepmind/mujoco/network/dependents?dependents_before=Mzc1MDM2NDE4NzM -->
 
 - [__Mujoco__](#Mujoco)
     - [人的建模](#humanoid_model)
@@ -68,6 +68,8 @@
 
 [用于分析人手样本钳式抓握执行情况的机器人测试台的设计和实现](https://github.com/NikonPic/PhoenixHand)
 
+[使用 ODE、PhysX 或 MuJoCo 后端的肌肉骨骼建模系统](https://github.com/wol101/GaitSym5)
+
 [Menagerie：MuJoCo物理引擎高质量模型集合](https://github.com/google-deepmind/mujoco_menagerie)
 
 ### 比赛 <span id="Mujoco"></span>
@@ -80,6 +82,8 @@
 ## ROS  <span id="ros"></span>
 
 [乐聚机器人控制](https://github.com/LejuRobotics/kuavo-ros-opensource) - 包含 Mujoco 仿真环境
+
+[ROS 的人体模型](https://github.com/shafaghkey/human_model)
 
 [将 ROS 与 MuJoCo 结合使用的封装器、工具和附加 API](https://github.com/ubi-agni/mujoco_ros_pkgs) - 支持 Noetic，- 其他 [mujoco_ros2_control](https://github.com/moveit/mujoco_ros2_control) 
 
@@ -104,6 +108,8 @@
 [使用 MuJoCo 物理引擎模拟的肌肉骨骼模型要解决的环境](https://github.com/MyoHub/myosuite) - 包含在 OpenAI gym API 中
 
 [将 opensim 4.0+ MSK 模型转换为 MuJoCo 格式的工具](https://github.com/MyoHub/myoconverter) - 具有优化的肌肉运动学和动力学
+
+[计算出遵循约束条件的最可能路径](https://github.com/rimao-uni/Frame-interpolation-by-OM-theory)
 
 [在MuJoCo中建模和模拟人机交互任务](https://github.com/User-in-the-Box/user-in-the-box) - 用户采用具有感知能力（例如自我中心视觉）的肌肉驱动生物力学模型进行建模，并通过强化学习进行训练以解决交互任务
 
@@ -154,7 +160,7 @@
 
 [旨在训练人形机器人的运动技能，强调从模拟到现实环境的零样本迁移](https://github.com/roboterax/humanoid-gym)
 
-[Humanoid-Gym：基于零样本 Sim2Real 迁移的人形机器人强化学习](https://github.com/thuuzi/bipedv5_gym)
+[Humanoid-Gym：基于零样本 Sim2Real 迁移的人形机器人强化学习](https://github.com/thuuzi/bipedv5_gym) - [其他1](https://github.com/2253209/humanoid_gym_2)
 
 [使用四足机器人 Unitree Go1 进行强化学习](https://github.com/DavidDema/DeepRL-quadruped-robot)
 
@@ -385,6 +391,8 @@
 
 [从人类示范中学习操纵技能](https://github.com/aai4r/aai4r-pouring-skill)
 
+[模仿引导强化学习](https://github.com/hengyuan-hu/ibrl)
+
 [使机械臂模仿另一只手臂的方向](https://github.com/Kisfodi/MimicArm)
 
 [通过模仿行为来理解大脑](https://github.com/jimzers/DSC180B-A08)
@@ -471,6 +479,8 @@
 
 [评估复杂任务分布中的元强化学习算法](https://github.com/mhelabd/Meta-RL)
 
+[解决元强化学习中的上下文解耦问题](https://github.com/FrankTianTT/INTACT)
+
 [人人皆可学习的元学习](https://github.com/ChoiDae1/Meta-learning-Study)
 
 [PAC-贝叶斯离线元强化学习](https://github.com/outshine-J/PAC-Bayesian-Offline-Meta-Reinforcement-Learning)
@@ -501,6 +511,10 @@
 [盲文识别](https://github.com/takaya-hirano-hayashibeLabo/braille-recognition)
 
 [动作捕捉环境](https://github.com/hartikainen/mocap-environments)
+
+### 触觉
+
+[证明在抓取的软捕获阶段使用触觉传感器的重要性](https://github.com/baha2r/Soft_Capture_Tactile)
 
 
 ## 规划 <span id="planning"></span>
@@ -732,6 +746,10 @@
 ## 研究 <span id="research"></span>
 
 [开发考虑人类偏好的机器人系统](https://github.com/joonhyung-lee/gov-prj-etri-llm-robotics)
+
+[在机器学习机制可解释性方面的工作](https://github.com/danibalcells/mech-interp-notebooks)
+
+[低质量数据的零样本强化学习](https://github.com/enjeeneer/zero-shot-rl)
 
 
 [谷歌研究库](https://github.com/google-research/google-research)
@@ -1261,6 +1279,8 @@
 
 ## 平台 <span id="platform"></span>
 
+[使用MuJoCo进行实时预测控制的交互式应用程序和软件框架](https://github.com/anupamkaul/mujoco-mpc-24) - 人形动作捕捉追踪，[其他1](https://github.com/anupamkaul/mujoco-24)、[其他2](https://github.com/alexper490/mujoco-mpc-cassie)
+
 [Gym](https://github.com/openai/gym) - 用于开发和比较强化学习算法，它提供了一个用于在学习算法和环境之间进行通信的标准 API，以及一组兼容该 API 的标准环境。已迁移至 [Gymnasium](https://github.com/Farama-Foundation/Gymnasium) 
 
 [Agility Robotics 的 Cassie 机器人的 mujoco 模拟因尽可能快地向前行走/奔跑而获得奖励](https://github.com/perrin-isir/gym-cassie-run) - [其他](https://github.com/AlexandreChenu/gym_cassie_dcil)
@@ -1417,6 +1437,10 @@
 
 
 ## 杂项 <span id="misc"></span>
+
+[仿生机器人](https://github.com/hty0111/Biorobotics)
+
+
 
 [InterGP](https://github.com/tdardinier/InterGP) - 收集数据、训练代理的流程
 
