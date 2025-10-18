@@ -57,7 +57,7 @@ CarlaUnreal是基于Unreal Engine开发的开源自动驾驶仿真平台，其�
 ### 1. CollisionSensor.cpp
 
 #### 文件路径
-`~/carla/Unreal/CarlaUE4/Plugins/Carla/Source/Carla/Sensor/CollisionSensor.cpp`
+`hutb/Unreal/CarlaUE4/Plugins/Carla/Source/Carla/Sensor/CollisionSensor.cpp`
 
 #### 功能
 - **类**：`ACollisionSensor`（继承自传感器基类，推测为`ASensor`）。
@@ -395,6 +395,31 @@ CarlaUnreal是基于Unreal Engine开发的开源自动驾驶仿真平台，其�
   - 降低分辨率或限制视场角。
   - 使用并行处理（如多线程）加速像素遍历。
   - 调整`refractory_period_ns`以减少事件生成率。
+
+
+### 像素读取器 PixelReader
+
+该类是一个从 UTextureRenderTarget2D 中读取像素的工具（仅支持 PF_R8G8B8A8 格式）。UTextureRenderTarget2D（渲染目标纹理）是一个可以在运行时由 GPU 动态绘制、渲染的“画布”或“屏幕截图”。
+
+包括由游戏线程调用的方法：
+
+- WritePixelsToArray 将渲染目标 RenderTarget 的像素拷贝到 BitMap。
+- RenderTarget 将像素倒进 渲染目标 RenderTarget。
+- SavePixelsToDisk 将 RenderTarget 中的像素异步保存到磁盘。
+- SendPixelsInRenderThread 用于将渲染命令入队，该命令将像素发送到传感器的数据流。它需要一个派生自 ASceneCaptureSensor 或兼容的传感器。请注意，序列化器需要定义一个在缓冲区前面分配的“header_offset”。
+- WritePixelsToBuffer 将 RenderTarget 中的像素拷贝到缓冲区
+
+
+
+#### 在渲染线程中发送像素
+
+渲染线程中安全地读取 UTextureRenderTarget2D 的像素数据，经过处理后通过传感器数据流发送给客户端（网络或ROS2）。
+
+1. 阻塞执行，直到渲染线程完成所有任务
+
+2. 在渲染线程中排队一个命令，该命令会将图像缓冲区写入数据流。我们需要在采集过程中获取帧、时间戳和传感器变换（因此在游戏线程中执行），以便它们反映当前时间点。否则，异步执行可能会向客户端发送一个未来版本的头。
+
+3. 阻塞执行，直到渲染线程完成所有任务
 
 ## 集成和扩展
 
