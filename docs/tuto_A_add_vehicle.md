@@ -127,21 +127,22 @@ __2. 导入 `.fbx`。__
 - 将 **_Normal Import Method_** 设置为 `Import Normals`。
 - （可选）将**_Material Import Method_**设置为`Do not create materials`。取消选中**_Import Textures_**以避免虚幻引擎创建默认材质。 
 
-骨架网格体将与两个新文件`<vehicle_name>_PhysicsAssets` and `<vehicle_name>_Skeleton`一起出现。
+骨架网格体将与两个新文件`SM_<vehicle_name>_PhysicsAssets` and `<vehicle_name>_Skeleton`一起出现。
 
 将其余`.fbx`文件与主车辆骨架`.fbx`文件分开导入。
 
 __3. 设置物理资源网格。__
 
->1. **_从内容浏览器(Content Browser)_** 中打开 `<vehicle_name>_PhysicsAssets`。
+>1. **_从内容浏览器(Content Browser)_** 中打开 `SM_<vehicle_name>_PhysicsAssets`。
 - **_骨骼树(Skeleton Tree)_** 面板中右键单击 `Vehicle_Base` 的网格体，然后转到 **_自Static Mesh处复制碰撞(Copy Collision from StaticMesh)_**。
 - 搜索并选择您的`SMC_<vehicle_name>`文件。您应该会看到物理资源网格的轮廓出现在视口中。
 - 从 `Vehicle_Base` 中删除默认的胶囊形状。
+>![Collision mesh](./img/vehicle/remove_capsule.jpg)
 - 选择所有轮子：
     - 转到 **_工具(Tools)_** 面板并将 “**_基元类型Primitive Type_**” 更改为`球体(Sphere)`。 
     - 转到 **_详情(Details)_** 面板并将 **_物理类型(Physics Type)_** 更改为`运动学(Kinematic)`。
     - 将 **_线性阻尼(Linear Damping)_** 设置为`0`。这将消除车轮上的任何额外摩擦。
-    - [碰撞](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/collision-overview?application_version=4.27) 选项中，为所有网格启用 **_仿真生成命中事件(Simulation Generates Hit Event)_**，车辆就会告诉自己发生了碰撞。它会触发车辆蓝图中的事件。
+    - [碰撞](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/collision-overview?application_version=4.27) 选项中，为所有网格启用 **_模拟生成命中事件(Simulation Generates Hit Event)_**，车辆就会告诉自己发生了碰撞。它会触发车辆蓝图中的事件。
 - 单击页面最右下角的 **_重新生成形体(Re-generate Bodies)_**。
 - 将车轮球体调整至车轮尺寸。
 - 保存并关闭窗口。
@@ -161,7 +162,7 @@ __5.  配置动画蓝图。__
 
 >1. 转到 `Content/Carla/Static/Car` 并选择任何 Carla 车辆文件夹。打开其动画蓝图。
 - 在 **_我的蓝图(My Blueprint)_** 面板中，双击 **_动画图表(AnimGraph)_** 。您将看到图表出现在视口中。 
-- 单击并拖动以选择 **_Mesh Space Ref Pose_** 、 **_Wheel Handler_** 和 **_Component To Local_** 组件。右键单击并选择复制。
+- 单击并拖动以选择 **_网格空间参考姿势(Mesh Space Ref Pose)_** 、 **_车轮处理器(Wheel Handler)_** 和 **_从组件空间到本地(Component To Local)_** 组件。右键单击并选择复制。
 - 返回您自己的车辆动画蓝图并将复制的内容粘贴到图形区域中。
 - 单击 **_从组件空间到本地(Component To Local)_** 组件中的站立人物并将其拖动到 **_输出姿势(Output Pose)_** 中的人物，以将组件连接在一起。
 - 单击左上角的 **_编译(Compile)_** 。您现在应该看到一条脉动的线流过整个序列。
@@ -181,12 +182,12 @@ __6. 准备车辆和车轮蓝图。__
 
 __7. 配置车轮蓝图。__
 
->1. 在车辆蓝图文件夹中，打开所有四个车轮蓝图。
+>1. 在车辆蓝图文件夹中，打开所有 4 个车轮蓝图。
 - 在 **_类默认值(Class Defaults)_** 面板中，将 **_碰撞网格体(Collision Mesh)_** 设置为 `Wheel_Shape`。__省略此步骤将导致车辆车轮陷入地面__。 
 - 根据您的车辆规格调整车轮形状半径、宽度、质量和阻尼率的值。 
-- 将 **疲劳 -> _轮胎配置(Tire Config)_** 设置为`CommonTireConfig`。
-- 在前轮(FL和FR)上根据您的喜好设置转向角度 **_转向角度(Steer Angle)_**（默认为`70`）。取消选中**_Affected by Handbrake_** 。
-- 在后轮(RL和RR)上将转向角度 **_转向角度(Steer Angle)_** 设置为 `0`。检查 **_Affected by Handbrake_**。
+- 将 **疲劳 -> _轮胎配置(Tire Config)_** 设置为`普通轮胎配置(CommonTireConfig)`（其他的还有`自行车轮胎配置(BikeTireConfig)`等）。
+- 在前轮（左前轮FL和右前轮FR）上根据喜好设置转向角度 **_转向角度(Steer Angle)_**（默认为`70`）。`车轮`组中，取消选中**_受手制动影响(Affected by Handbrake)_** 。
+- 在后轮(RL和RR)上将转向角度 **_转向角度(Steer Angle)_** 设置为 `0`。检查`车轮`组中，取消选中 **_受手制动影响(Affected by Handbrake)_**。
 - 设置悬架值时，您可以使用 [此处](tuto_D_customize_vehicle_suspension.md) 的值作为指导。
 - 编译并保存。
 
@@ -194,12 +195,12 @@ __7. 配置车轮蓝图。__
 
 __8. 配置车辆蓝图。__
 
->1. 从 **_内容浏览器(Content Browser)_** 中，打开您的`BP_<vehicle_name>`。 
+>1. 从 **_内容浏览器(Content Browser)_** 中，打开`Carla/Blueprints/Vehicles/{Vehicle_Name}/BP_<vehicle_name>`。 
 - 在 **_组件(Components)_** 面板中，选择 **_网格体 (VehicleMesh) (继承)_** 。
-- 在 **_细节(Details)_** 面板中，转到 **_骨骼网格体(Skeletal Mesh)_** 搜索并选择车辆的基础骨架文件（位于 `Carla/Static/Car/4Wheeled/<vehicle_name>` 文件夹中）。 
-- 转到 **_细节(Details)_** 面板中的 **_动画类(Anim Class)_**。搜索并选择您的动态蓝图 `AnimBP_<vehicle_name>` 文件。
+- 在 **_细节(Details)_** 面板中，转到 `网格体` 中的 **_骨骼网格体(Skeletal Mesh)_** 搜索并选择车辆的基础骨架文件（比如`SM_BYDseal_v2`，位于 `Carla/Static/Car/4Wheeled/<vehicle_name>` 文件夹中）。 
+- 转到 **_细节(Details)_** 面板中的 **_动画(Anim Class)_**。搜索并选择您的动态蓝图 `AnimBP_<vehicle_name>` 文件（比如`BYD_Animation`）。
 - 在 **_组件(Components)_** 面板中，选择 **_Custom Collision (继承)_** 。
-- 在 **_细节(Details)_** 面板中选择 **_静态网格体(Static Mesh)_** 并搜索您的光线投射传感器网格体 `SM_sc_<vehicle_name>` 。
+- 在 **_细节(Details)_** 面板中选择 **_静态网格体(Static Mesh)_** 并搜索您的光线投射传感器网格体 `SM_sc_<vehicle_name>` (raycast sensor mesh)。
 - 在 **_组件(Components)_** 面板中，选择 **_载具移动 (MovementComp) (继承)_** 。 
 - 在 **_细节(Details)_** 面板中，搜索 `wheel` 。您将找到每个轮子的设置。对于每一个，单击 **_车轮类(Wheel Class)_** 并搜索与正确车轮位置相对应的`BP_<vehicle_name>_<wheel_name>`文件。 
 
@@ -210,9 +211,9 @@ __8. 配置车辆蓝图。__
 >1. 将它们拖到 **_组件(Components)_** 面板中的 **_网格体 (VehicleMesh) (继承)_** 层次结构中。
 - 选择层次结构中的额外网格并在 **_细节(Details)_** 面板中搜索 `Collision`。 
 - 将碰撞预设 **_Collision Presets_** 设置为 `NoCollision`。
-- 选择层次结构中的任何灯光网格。在 **_Details_** 面板中搜索 `Tag` 并添加标签 `emissive`。 
+- 选择层次结构中的任何灯光网格。在 **_Details_** 面板中搜索 `Tag` 并添加标签 `发射(emissive)`。 
 
-单击 **_Save_** 并 **_Compile_** 。
+单击 **保存(Save)** 并 **编译(Compile)** 。
 
 - 我们还可以[自定义车辆的车牌](custom_plate.md)。
 
@@ -256,13 +257,13 @@ __6.__ __准备车辆和车轮蓝图__
 
 转到 Carla/Blueprints/Vehicles 中所有本地 Carla 车辆的文件夹。从内容浏览器中，将四轮蓝图复制到您自己车辆的蓝图文件夹中。重命名文件以将旧车辆名称替换为您自己的车辆名称。
 
-复制四个轮子，然后再次复制其他轮子。如果是 6 轮车辆，您将需要 6 个不同的车轮：FLW、FRW、MLW、MRW、RLW、RRW。
+复制 4 个轮子，然后再次复制其他轮子。如果是 6 轮车辆，您将需要 6 个不同的车轮：左前轮(FLW)、右前轮(FRW)、左中轮(MLW)、右中轮(MRW)、左后轮(RLW)、右后轮(RRW)。
 
 ![n_wheel_bps](./img/nwheels.png)
 
 __7.__ __配置轮子蓝图__
 
-对于 4 轮车辆，请遵循上述第 __7__ 节。 N 轮车辆的主要区别在于手刹和转向参数的影响。在某些车辆（例如长轴距卡车）中，前 2 对车轮将进行转向，其中一组可能比其他车轮转向更多。最后面的一对可能会受到手刹的影响，具体情况取决于您正在建模的车辆。
+对于 4 轮车辆，请遵循**添加4轮车辆**的第 __7__ 节。 N 轮车辆的主要区别在于手刹和转向参数的影响。在某些车辆（例如长轴距卡车）中，前 2 对车轮将进行转向，其中一组可能比其他车轮转向更多。最后面的一对可能会受到手刹的影响，具体情况取决于您正在建模的车辆。
 
 __8.__ __配置车辆蓝图__
 

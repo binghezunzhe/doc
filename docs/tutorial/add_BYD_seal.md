@@ -78,6 +78,30 @@ void UActorDispatcher::Bind(ACarlaActorFactory &ActorFactory)
 }
 ```
 
+## 新加内容的分析
+
+### Static 资产
+
+新加的车辆静态资产位于`Carla\Static\Car\4Wheeled\BYD`，包括：
+* SM_sc_BYDseal.uasset (SMC_BYDseal.uasset) ：静态网格(Static Mesh)
+
+
+### 蓝图
+
+新加的车辆蓝图位于`Carla\Blueprints\Vehicles\BYD`，包括：
+
+* BP_BYDseal.uasset ：车辆蓝图
+* BP_BYD_FLW.uasset ：左前轮（Front Left Wheel）
+* BP_BYD_FRW.uasset ：右前轮（Front Right Wheel）
+* BP_BYD_RLW.uasset ：左后轮（Rear Left Wheel）
+* BP_BYD_RRW.uasset ： 右后轮（Rear Right Wheel）
+
+
+## 问题
+
+###### 轮子不旋转
+
+目录`Carla\Static\Car\4Wheeled\BYD`下有两个动画蓝图，删除其中的一个并参考 [8. 配置车辆蓝图]() 重新将动画蓝图 `BYD_Animation` 绑定到车辆蓝图`Carla/Blueprints/Vehicles/{Vehicle_Name}/BP_BYDseal`。
 
 ## 参考
 

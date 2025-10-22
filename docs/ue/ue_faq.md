@@ -240,6 +240,17 @@ C:\Users\Administrator\AppData\Local\CarlaUE4\Saved\Crashes
 
 ![](../img/tuto_D_windows_debug/restore_scene.jpg)
 
+然后就可以在VS右下角的`调用堆栈`中查看堆栈中代码报错的行。
+
+###### 编辑器中运行(PIE)场景时添加命令行参数
+
+在自动测试时，需要在`CarlaUE4.exe`后面添加一些参数，操作步骤如下：
+
+1.在编辑器的菜单中：编辑(Edit) -> 编辑器偏好设置(Editor Preferences) -> 播放(Play) -> 在独立进程游戏中运行(Play in Standalone game)，有一个文本框`附加启动参数`，可以在这里添加启动所需的参数（比如：`--carla-rpc-port=3654 --carla-streaming-port=0 -nosound`）
+
+2.点`运行`中的三角下拉菜单中的`独立进程游戏`启动场景（直接点运行附带的参数不生效）
+
+
 
 ## 参考链接
 * [UE4初学者系列教程合集-全中文新手入门教程](https://www.bilibili.com/video/BV164411Y732/?share_source=copy_web&vd_source=d956d8d73965ffb619958f94872d7c57)
