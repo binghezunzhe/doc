@@ -8,7 +8,7 @@
 
 **1.软件安装**
 
-到OpenSim的 [下载页面](https://simtk.org/frs/?group_id=91) 进行软件的下载，安装好双击桌面图片便可看到软件界面。
+下载 [链接](https://pan.baidu.com/s/1n2fJvWff4pbtMe97GOqtvQ?pwd=hutb) 中的`software/OpenSim-4.5-win64.exe`，或者从 OpenSim 的 [下载页面](https://simtk.org/frs/?group_id=91) 进行软件的下载，安装好双击桌面图表便可看到软件界面。
 
 **2.导入模型**
 
