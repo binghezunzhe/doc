@@ -25,7 +25,7 @@
 
 ### Github 访问加速
 
-有时候 Github 访问不了，可以下载并运行 [链接](https://gitee.com/OpenHUTB/software/releases/tag/speed_up_github) 中对应平台的软件（比如 Windows 平台中下载 [fastgithub-win-x64.zip](https://gitee.com/OpenHUTB/software/releases/download/speed_up_github/fastgithub-win-x64.zip) 解压后运行`FastGithub.UI.exe`即可正常访问Github）。
+有时候 Github 访问不了，可以下载并运行 [链接](https://gitee.com/OpenHUTB/sw/releases/tag/up) 中对应平台的软件（比如 Windows 平台中下载 [fastgithub-win-x64.zip](https://gitee.com/OpenHUTB/software/releases/download/speed_up_github/fastgithub-win-x64.zip) 解压后运行`FastGithub.UI.exe`即可正常访问Github）。
 
 
 
