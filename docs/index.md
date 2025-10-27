@@ -2,7 +2,7 @@ title: 主页
 
 # [人车模拟](https://carla.readthedocs.io/en/latest/)
 
-欢迎使用人车模拟文档，该页面包含所有内容的索引。阅读 [基础](#primary) 部分相关内容后可以按自己喜欢的顺序随意阅读。
+欢迎使用人车模拟文档，该页面包含具身人、无人车、无人机所有内容的索引。阅读 [基础](#primary) 部分相关内容后可以按自己喜欢的顺序随意阅读。
 
 
 * [__简介__](#primary)  
@@ -10,9 +10,9 @@ title: 主页
     * [车辆](#vehicle)  
     * [行人](#pedestrian)  
 * [__模拟__](#simulator)
-    *   [概念](#concept)
-    *   [模块](#modules) 
-    *   [开发](#development)
+    * [概念](#concept)
+    * [模块](#modules) 
+    * [开发](#development)
 * [__场景__](#scene)
     * [地图孪生](#map_twin)
     * [资产孪生](#assert_twin)
@@ -111,7 +111,7 @@ title: 主页
 
 [__自行车__](pedestrian/cycle.md) - 可提供最高程度的游戏内控制和反馈的自行车模拟器
 
-[__人形机器人仿真__](./pedestrian/humanoid.md) - 提供人形机器人 Mujoco、肌肉骨骼[OpenSim](pedestrian/OpenSim.md) 的仿真环境介绍
+[__具身人模拟__](./pedestrian/humanoid.md) - 提供具身人 Mujoco、肌肉骨骼[OpenSim](pedestrian/OpenSim.md) 的仿真环境介绍
 
 [__生成行人导航__](tuto_M_generate_pedestrian_navigation.md) — 获取行人四处走动所需的信息
 
