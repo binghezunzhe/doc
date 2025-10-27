@@ -240,6 +240,8 @@ title: 主页
 
 [__自定义资产__](custom_assets_tutorials.md) — Carla 中资产的的开发
 
+[__道具创作__](content_authoring_props.md) — 道具创作的教程
+
 [__添加摩擦触发器__](tuto_G_add_friction_triggers.md) — 定义车轮的动态框触发器
 
 [__控制车辆物理模型__](tuto_G_control_vehicle_physics.md) — 设置车辆物理的运行时的变化

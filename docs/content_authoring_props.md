@@ -1,42 +1,43 @@
-# Content authoring - props
+# 内容创作 - 道具
 
-Creating a custom prop in CARLA is quick and straightforward. Follow these steps to import and use a custom asset as a prop inside a CARLA simulation.
+在 HUTB 中创建自定义道具快捷又简单。请按照以下步骤导入自定义资产并将其用作 HUTB 模拟中的道具。
 
-* __[Download or model an asset](#download-or-model-an-asset)__ 
-* __[Import the asset](#import-the-asset-into-the-unreal-editor)__ 
-* __[Add the new prop to the JSON configuration](#add-the-new-prop-to-the-json-configuration-file)__ 
-* __[Use the new prop in simulation](#use-the-new-prop-in-the-simulation)__
-* __[Make a CARLA package with new props](#make-a-carla-package-with-new-props)__ 
-* __[Use a static mesh as a prop](#use-static-mesh-as-a-prop-through-the-api)__ 
+* __[下载或建模资产](#download-or-model-an-asset)__ 
+* __[导入资产](#import-the-asset-into-the-unreal-editor)__ 
+* __[将新的道具添加到 JSON 配置中](#add-the-new-prop-to-the-json-configuration-file)__ 
+* __[在模拟中使用新道具](#use-the-new-prop-in-the-simulation)__
+* __[使用新道具制作 HUTB 包](#make-a-carla-package-with-new-props)__ 
+* __[使用静态网格作为道具](#use-static-mesh-as-a-prop-through-the-api)__ 
 
 ---
 
-## Download or model an asset
+## 下载或建模资产
 
-You may find ready-made 3D assets on sites such as [TurboSquid](https://www.turbosquid.com/) or [Sketchfab](https://sketchfab.com/) that suite your usecase (**make sure to check that the license suits your intended use**). Alternatively, if you are adept at 3D modelling, you may choose to model the object in a 3D modelling application such as Blender or Maya.
+您可以在 [TurboSquid](https://www.turbosquid.com/) 或 [Sketchfab](https://sketchfab.com/) 等网站上找到适合您用例的现成 3D 资产（**请务必检查其许可证是否适合您的预期用途**）。或者，如果您擅长 3D 建模，您可以选择在 Blender 或 Maya 等 3D 建模应用程序中对物体进行建模。
 
 ![police_barrier](img/content_tutorials/police_barrier_model.png)
 
-For this example, we [download an asset](https://skfb.ly/ozJB6) from Sketchfab that has a creative commons license. First, import the asset into Blender to inspect it to ensure it suits our intended use. For this asset, a couple of modifications were required to prepare it for use in CARLA:
+在本例中，我们从 Sketchfab [下载](https://skfb.ly/ozJB6) 了一个拥有知识共享许可的资产。首先，将该资产导入 Blender 进行检查，确保其符合我们的预期用途。为了在 HUTB 中使用，我们需要对该素材进行一些修改：
 
-* __Rescaling__: The asset was unrealistically large (5m tall), scaling down to 1m tall was required to suit our intended use in CARLA. Check the dimensions carefully in Blender before exporting.
-* __Origin of geometry__: The origin of geometry for this asset was above the ground plane. This was moved to the scene origin since this will serve as our anchor point for the prop inside the CARLA simulation.
+* __缩放__: 该资产过大（5米高），为了满足我们在 HUTB 中的预期用途，需要将其缩小到1米高。导出前，请在 Blender 中仔细检查尺寸。 
+* __几何原点__: 此资产的几何原点位于地平面上方。我们将其移至场景原点，因为这将作为 HUTB 模拟中道具的锚点。
 
-If the model is not already in FBX format or needed modification, export it as FBX from Blender or your preferred 3D application.
+如果模型尚未采用 FBX 格式或需要修改，请从 Blender 或您喜欢的 3D 应用程序将其导出为 FBX。
+
 
 ---
 
-## Import the asset into the Unreal Editor
+## 导入资产到虚幻编辑器
 
-Now that we have an asset in FBX format, we can import it into the CARLA content library. Launch the CARLA Unreal Engine editor by running `make launch` in the root directory of the CARLA source code repository. Once the editor is open, navigate to an appropriate place in the content directories (`Content/Carla/Static/Static` in this example). Drag the FBX file into the content browser, import with the default options. Once the import is complete we can see our new prop as a static mesh in the content folder:
+现在我们有了 FBX 格式的资源，可以将其导入 HUTB 内容库了。在 HUTB 源代码库的根目录中运行 `make launch` 命令，启动 HUTB 编辑器。打开编辑器后，导航到内容目录中的相应位置（本例中为 `Content/Carla/Static/Static`）。将 FBX 文件拖到内容浏览器中，并使用默认选项导入。导入完成后，我们可以在内容文件夹中看到新道具的静态网格体：
 
 ![police_barrier](img/content_tutorials/police_barrier_imported.png)
 
 ---
 
-## Add the new prop to the JSON configuration file
+## 将新的道具添加到 JSON 配置中
 
-To register the asset as a prop and use it through the CARLA API, we need to include it in the configuration file `Default.Package.json` in the `Unreal/CarlaUE4/Content/Carla/Config` directory, inside the root folder of the CARLA source code repository. Add a new entry in this file matching the format of the existing entries, locating the static mesh file that you imported (you can double check the path by hovering over the imported asset in the content browser):
+要将资产注册为道具并通过 HUTB API 使用它，我们需要将其添加到配置文件 `Default.Package.json` 中，该文件位于 HUTB 源代码库根文件夹内的 `Unreal/CarlaUE4/Content/Carla/Config` 目录中。在此文件中添加一个与现有条目格式匹配的新条目，并定位您导入的静态网格文件（您可以将鼠标悬停在内容浏览器中导入的资源上来仔细检查路径）：
 
 ```json
 {
@@ -60,11 +61,12 @@ To register the asset as a prop and use it through the CARLA API, we need to inc
 
 ---
 
-# Use the new prop in the simulation
+# 在模拟中使用新道具
 
-Start the CARLA simulation Unreal Engine editor with the play command. Once it is running, open a Python script or notebook. The new prop will be assigned the ID `static.prop.policebarrier` (i.e. `static.prop.<name_lower_case>`).
+在 HUTB 编辑器中使用运行命令启动模拟。运行后，打开 Python 脚本或 notebook。新道具将被分配 ID `static.prop.policebarrier`（即 `static.prop.<name_lower_case>`）。
 
-Filter for the name you entered in the name field in `Default.Package.json` in lower case and you will find a new blueprint ID for your new prop:
+
+过滤您在 `Default.Package.json` 中的名称字段中输入的小写名称，您将找到新道具的新蓝图 ID：
 
 ```py
 import carla
@@ -77,13 +79,13 @@ for bp in bp_lib.filter('*policebarrier*'):
     print(bp.id)
 ```
 
-This should return:
+这应该返回：
 
 ```sh
 >>> static.prop.policebarrier
 ```
 
-Now you can place your new prop in the simulation in the same way as native CARLA props:
+现在，您可以按照与原生 HUTB 道具相同的方式将新道具放置在模拟中：
 
 ```py
 barrier_bp = bp_lib.find('static.prop.policebarrier')
@@ -97,35 +99,35 @@ for spawn_loc in spawn_locations:
 
 ---
 
-## Make a CARLA package with new props
+## 使用新道具制作 HUTB 包
 
-Once you have imported one or more props into CARLA using the previous steps, ensure you have saved everything in the Unreal Editor interface.You can then export a new CARLA package containing the new props using the following command:
+使用上述步骤将一个或多个道具导入 HUTB 后，请确保已保存引擎编辑器界面中的所有内容。然后，您可以使用以下命令导出包含新道具的新 HUTB 包：
 
 ```sh
 make package #ARGS="--python-version=3.X" - for a specific Python version
 ```
 
-When the export process is finished, the exported map package will be saved as a compressed archive:
+导出过程完成后，导出的地图包将保存为压缩存档：
 
-* **Linux**: `.tar.gz` archive in the `${CARLA_ROOT}/Dist` directory
-* **Windows**: `.zip` archive in the `${CARLA_ROOT}/Build/UE4Carla` directory
+* **Linux**: `.tar.gz` 存档在 `${CARLA_ROOT}/Dist` 目录
+* **Windows**: `.zip` 存档在 `${CARLA_ROOT}/Build/UE4Carla` 目录
 
 ---
 
-## Use static mesh as a prop through the API
+## 通过 API 使用静态网格作为道具
 
-Static meshes already included in the CARLA content library can be nominated for use as props through the Python API using the `static.prop.mesh` blueprint. Locate the desired mesh in the CARLA content browser and take note of its path. For this example we will choose the Dodge Charger model from the `/Game/Carla/Static/Car/4Wheeled/ParkedVehicles` directory. 
+HUTB 内容库中已包含的静态网格可以通过 Python API 使用 `static.prop.mesh` 蓝图指定为道具。在 HUTB 内容浏览器中找到所需的网格并记下其路径。在本例中，我们将从 `/Game/Carla/Static/Car/4Wheeled/ParkedVehicles` 目录中选择`道奇 Charger` 模型。
 
 ![parked_charger_in_content](img/content_tutorials/charger_static_mesh.png)
 
-We can use the following code to place the vehicle in the map as a prop:
+我们可以使用以下代码将车辆作为道具放置在地图中：
 
 ```py
-# Set the path for the chosen static mesh
+# 设置所选静态网格的路径
 mesh_path = '/Game/Carla/Static/Car/4Wheeled/ParkedVehicles/Charger/SM_ChargerParked.SM_ChargerParked'
 spawn_point = carla.Transform(carla.Location(x=52.7, y=127.7, z=0), carla.Rotation())
 
-# Use the static.prop.mesh bp and set the mesh_path attribute
+# 使用 static.prop.mesh bp 并设置 mesh_path 属性
 parked_vehicle_bp = bp_lib.find('static.prop.mesh')
 parked_vehicle_bp.set_attribute('mesh_path', mesh_path)
 
@@ -134,4 +136,4 @@ parked_vehicle = world.spawn_actor(mesh_bp, spawn_point)
 
 ![parked_charger_in_sim](img/content_tutorials/charger_in_sim.png)
 
-This method works both with the built-from-source version of CARLA and also a package version of CARLA, as long as the package contains the nominated static mesh in the correct location. 
+只要包中包含指定静态网格的正确位置，此方法就适用于 HUTB 的源代码编译版本和 HUTB 的打包版本。
