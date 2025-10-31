@@ -46,7 +46,10 @@
 
 * [Windows 下的可发布包的构建](../launch_windows.md)
 
-* 缓存路径位于：`hutb\Unreal\CarlaUE4\DerivedDataCache`
+* 源代码版引擎的缓存路径位于项目的DeriveDataCache目录下：`hutb\Unreal\CarlaUE4\DerivedDataCache`（定义在`engine\Engine\Config\BaseEngine.ini`的`[InstalledDerivedDataBackendGraph]`变量组中）
+```shell
+Boot=(Type=Boot, Filename="%ENGINEUSERDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
+```
 
 * [PIE 和 SIE](https://blog.csdn.net/qq_43497224/article/details/129336509)
 
