@@ -1031,6 +1031,8 @@
 
 [CARLA 0.9.15 上使用 ROS2 模拟](https://github.com/rohankhaire-work/carla-ros2-env)
 
+[将 CARLA 模拟器连接到 Autoware Universe 软件的附加软件包](https://github.com/fengyeying/carla_autoware_bridge)
+
 [Carla ROS2 Bridge](https://github.com/JesusAnaya/tfm-carla-ros2-bridge)
 
 [基于触觉的 CARLA 模拟的 ROS 包](https://github.com/MohamedOmda92/haptic_carla_pkg)
